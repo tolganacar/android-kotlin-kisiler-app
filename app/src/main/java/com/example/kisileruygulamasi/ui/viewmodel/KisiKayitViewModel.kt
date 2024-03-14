@@ -9,9 +9,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class KisiKayitViewModel @Inject constructor(var krepo:KisilerRepository): ViewModel() {
+class KisiKayitViewModel @Inject constructor(var krepo: KisilerRepository) : ViewModel() {
 
-    fun kaydet(kisi_ad:String,kisi_tel:String){
+    fun kaydet(kisi_ad: String, kisi_tel: String) {
         CoroutineScope(Dispatchers.Main).launch {
             krepo.kaydet(kisi_ad, kisi_tel)
         }

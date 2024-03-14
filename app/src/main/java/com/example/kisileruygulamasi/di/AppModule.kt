@@ -15,19 +15,19 @@ import javax.inject.Singleton
 class AppModule {
     @Provides
     @Singleton
-    fun provideKisilerRepository(kds:KisilerDataSource) : KisilerRepository {
+    fun provideKisilerRepository(kds: KisilerDataSource): KisilerRepository {
         return KisilerRepository(kds)
     }
 
     @Provides
     @Singleton
-    fun provideKisilerDataSource(kdao:KisilerDao) : KisilerDataSource {
+    fun provideKisilerDataSource(kdao: KisilerDao): KisilerDataSource {
         return KisilerDataSource(kdao)
     }
 
     @Provides
     @Singleton
-    fun provideKisilerDao() : KisilerDao {
+    fun provideKisilerDao(): KisilerDao {
         return ApiUtils.getKisilerDao()
     }
 }
